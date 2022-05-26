@@ -1,0 +1,1 @@
+web: gunicorn meanc.wsgi

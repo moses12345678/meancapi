@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+<!-- Jumbotron -->
+{% block content %}
+<!-- Jumbotron -->
+{% load static %}
+<!--is auth-->
+<p>You are not logged in</p>
+<a class="btn btn-outline-primary" href="{% url 'login' %}">SignIn</a>
+<div class="jumbotron text-center mdb-color lighten-2 white-text mx-2 mb-5">
+  <div class="col-lg-6">
+    <img
+      src="{% static 'assets/img/sp18.png' %}"
+      class="img-responsive center-block"
+      alt=""
+      title=""
+    />
+  </div>
+  <div class="col-lg-6">
+    <!-- Subtitle -->
+    <p class="my-4 h6">Coming Soon....</p>
+
+    <!-- Grid row -->
+    <div class="row d-flex justify-content-center">
+      <!-- Grid column -->
+      <div class="col-xl-7 pb-2">
+        <p class="card-text">We're working on here....</p>
+        <span style="font-size: 100px">&#8987;</span>
+      </div>
+      <!-- Grid column -->
+    </div>
+    <!-- Grid row -->
+
+    <hr class="my-4 rgba-white-light" />
+  </div>
+</div>
+<!-- end else for login-->
+<!-- Jumbotron -->
+{% endblock %}
