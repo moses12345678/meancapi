@@ -171,20 +171,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
-        #----------------------------------------------#
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'meancdata',
-        # 'HOST': 'dbmeanc.postgres.database.azure.com',
-        # 'PORT': 5432,
-        # 'USER': 'moses',
-        # 'PASSWORD': 'F@ciles123'
-        #----------------------------------------------#
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'dd53o88r6kau6p',
-        # 'HOST':'ec2-34-231-183-74.compute-1.amazonaws.com',
-        # 'PORT':5432,
-        # 'USER':'impxfxrblcybol',
-        # 'PASSWORD':'43360433e7bac98df1d81e6f396660a3a88bbf2b87141d208e41e4fafbd689a0'
     }
 }
 
