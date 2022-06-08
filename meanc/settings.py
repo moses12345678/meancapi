@@ -169,8 +169,14 @@ WSGI_APPLICATION = 'meanc.wsgi.application'
 DATABASES = {
     # 'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'c1889045c_meancdb',
+        'USER': 'c1889045c_moses',
+        'PASSWORD': 'F@ciles123',
+        'HOST': '91.234.195.128',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
     }
 }
 
