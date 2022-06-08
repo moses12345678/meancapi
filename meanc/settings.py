@@ -34,6 +34,8 @@ ALLOWED_HOSTS = ['Meanc-env.eba-cfxxih62.us-east-2.elasticbeanstalk.com', 'meanc
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'http://localhost:19006',
+    'http://127.0.0.1:8000',
     'https://mnc2.herokuapp.com',
     'https://meanc.herokuapp.com',
     'https://meanc2.herokuapp.com',
@@ -45,6 +47,8 @@ CSRF_TRUSTED_ORIGINS = [
     'https://meanc.herokuapp.com',
     'https://mnc2.herokuapp.com',
     'http://localhost:3000',
+    'http://127.0.0.1:8000',
+    'http://localhost:19006',
     'https://meanc2.herokuapp.com',
     'https://meanc.azurewebsites.net',
     'https://meanc2.azurewebsites.net'
@@ -129,11 +133,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.TokenAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        'rest_framework.permissions.IsAdminUser',
     ),
 }
+
 
 TEMPLATES = [
     {
@@ -169,14 +176,14 @@ WSGI_APPLICATION = 'meanc.wsgi.application'
 DATABASES = {
     # 'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'c1889045c_meancdb',
-        'USER': 'c1889045c_moses',
-        'PASSWORD': 'F@ciles123',
-        'HOST': '91.234.195.128',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.mysql',
+        # 'NAME': 'c1889045c_meancdb',
+        # 'USER': 'c1889045c_moses',
+        # 'PASSWORD': 'F@ciles123',
+        # 'HOST': '91.234.195.128',   # Or an IP Address that your DB is hosted on
+        # 'PORT': '3306',
     }
 }
 
